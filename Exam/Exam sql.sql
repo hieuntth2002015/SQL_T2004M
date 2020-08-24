@@ -103,8 +103,7 @@ ON Posts
 AFTER UPDATE 
 AS   
    BEGIN 
-    UPDATE UpdateTime
+    UPDATE X
 	SET UpdateTime = CURRENT_TIMESTAMP
 	FROM Posts
-	JOIN inserted i ON UpdateTime.key = i.key 
-    END
+	END
